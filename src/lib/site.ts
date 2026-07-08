@@ -39,23 +39,27 @@ export const categories = [
     title: "Laboratory Glassware",
     blurb:
       "Borosilicate glassware, volumetric ware and custom fabrication for every lab.",
+    image: "/categories/glassware.png",
   },
   {
     slug: "chemicals",
     title: "Chemicals & Reagents",
     blurb:
       "Lab chemicals, bio-chemicals, rare reagents, culture media and indicators.",
+    image: "/categories/chemicals.png",
   },
   {
     slug: "equipment",
     title: "Instruments & Equipment",
     blurb:
       "Bench-top instruments, analytical and general laboratory equipment.",
+    image: "/categories/equipment.png",
   },
   {
     slug: "general",
     title: "General & Consumables",
     blurb:
       "Plasticware, filter papers, membranes, gloves, cleanroom apparel and more.",
+    image: "/categories/general.png",
   },
 ] as const;

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageIntro } from "@/components/PageIntro";
@@ -38,6 +39,19 @@ export default async function CategoryPage({
   return (
     <>
       <PageIntro eyebrow="Products" title={cat.title} subtitle={cat.blurb} />
+
+      <div className="mx-auto max-w-4xl px-4 pt-8 sm:px-6">
+        <div className="relative h-48 overflow-hidden rounded-2xl border border-slate-200 sm:h-64">
+          <Image
+            src={cat.image}
+            alt={cat.title}
+            fill
+            sizes="(max-width: 896px) 100vw, 896px"
+            priority
+            className="object-cover"
+          />
+        </div>
+      </div>
 
       <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
         {items.length > 0 ? (

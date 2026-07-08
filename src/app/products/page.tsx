@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PageIntro } from "@/components/PageIntro";
 import { categories } from "@/lib/site";
@@ -24,20 +25,26 @@ export default function ProductsPage() {
             <Link
               key={c.slug}
               href={`/products/${c.slug}`}
-              className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-md"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-md"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600 ring-1 ring-brand-100">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M9 3h6M10 3v6l-4.5 8A2 2 0 0 0 7.3 20h9.4a2 2 0 0 0 1.8-3L14 9V3" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+              <div className="relative aspect-video overflow-hidden bg-slate-100">
+                <Image
+                  src={c.image}
+                  alt={c.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className="object-cover transition duration-300 group-hover:scale-105"
+                />
               </div>
-              <h2 className="mt-4 text-lg font-bold text-ink group-hover:text-brand-700">
-                {c.title}
-              </h2>
-              <p className="mt-1.5 text-sm text-muted">{c.blurb}</p>
-              <span className="mt-4 text-sm font-semibold text-brand-700">
-                Explore →
-              </span>
+              <div className="flex flex-1 flex-col p-7">
+                <h2 className="text-lg font-bold text-ink group-hover:text-brand-700">
+                  {c.title}
+                </h2>
+                <p className="mt-1.5 text-sm text-muted">{c.blurb}</p>
+                <span className="mt-4 text-sm font-semibold text-brand-700">
+                  Explore →
+                </span>
+              </div>
             </Link>
           ))}
         </div>

@@ -78,17 +78,23 @@ export default function Home() {
             <Link
               key={c.slug}
               href={`/products/${c.slug}`}
-              className="group rounded-xl border border-slate-200 bg-white p-6 transition hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-md"
+              className="group flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-md"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-50 text-brand-600 ring-1 ring-brand-100">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M9 3h6M10 3v6l-4.5 8A2 2 0 0 0 7.3 20h9.4a2 2 0 0 0 1.8-3L14 9V3" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+              <div className="relative aspect-16/10 overflow-hidden bg-slate-100">
+                <Image
+                  src={c.image}
+                  alt={c.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition duration-300 group-hover:scale-105"
+                />
               </div>
-              <h3 className="mt-4 font-semibold text-ink group-hover:text-brand-700">
-                {c.title}
-              </h3>
-              <p className="mt-1.5 text-sm text-muted">{c.blurb}</p>
+              <div className="p-5">
+                <h3 className="font-semibold text-ink group-hover:text-brand-700">
+                  {c.title}
+                </h3>
+                <p className="mt-1.5 text-sm text-muted">{c.blurb}</p>
+              </div>
             </Link>
           ))}
         </div>
