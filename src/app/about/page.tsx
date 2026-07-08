@@ -55,7 +55,7 @@ export default function AboutPage() {
           <div className="space-y-5 text-slate-700 lg:col-span-2">
             <p>
               <strong className="text-ink">{site.name}</strong> and{" "}
-              <strong className="text-ink">Pearala Agencies</strong> is a
+              <strong className="text-ink">Pearala Agencies</strong>&nbsp;is a
               family-owned company situated in Hyderabad with vast experience.
               We are known for globally sourcing and supplying lab needs, from
               laboratory glassware and its fabrication, to chemicals,
@@ -67,15 +67,15 @@ export default function AboutPage() {
             </p>
             <p>
               We cater to customer requirements across India. It is our policy
-              to offer quality products that meet the requirements of today&rsquo;s
-              scientists, at competitive prices, with timely supply and backed
-              by high standards of after-sales service.
+              to offer quality products that meet the requirements of
+              today&rsquo;s scientists, at competitive prices, with timely
+              supply and backed by high standards of after-sales service.
             </p>
             <p>
-              We also welcome enquiries for products{" "}
-              <em>not listed</em> on this site, and we&rsquo;ll try to fulfil them to
-              the best of our capabilities. We look forward to partnering with
-              you for all your laboratory needs.
+              We also welcome enquiries for products not listed on this site,
+              and we&rsquo;ll try to fulfil them to the best of our
+              capabilities. We look forward to partnering with you for all your
+              laboratory needs.
             </p>
 
             <div className="rounded-xl border border-brand-100 bg-brand-50 p-5">
@@ -110,8 +110,8 @@ export default function AboutPage() {
             </Link>
             <div className="relative h-48 overflow-hidden rounded-xl border border-slate-200">
               <Image
-                src="/lab/distillation.png"
-                alt="Laboratory glassware distillation setup"
+                src="/lab/glassware-bench.png"
+                alt="Laboratory glassware on a bench"
                 fill
                 sizes="(max-width: 1024px) 100vw, 33vw"
                 className="object-cover"
@@ -127,7 +127,8 @@ export default function AboutPage() {
             Who we serve
           </h2>
           <p className="mt-1 text-muted">
-            Valued customers across research, healthcare, industry and education.
+            Valued customers across research, healthcare, industry and
+            education.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             {clientTypes.map((c) => (

@@ -22,8 +22,8 @@ export default function BrandsPage() {
       <div className="mx-auto max-w-6xl px-4 pt-8 sm:px-6">
         <div className="relative h-56 overflow-hidden rounded-2xl border border-slate-200 sm:h-72">
           <Image
-            src="/banners/warehouse.png"
-            alt="HyGlass warehouse stocked with laboratory supplies"
+            src="/lab/glassware-blue.png"
+            alt="Laboratory glassware and flasks"
             fill
             sizes="(max-width: 1152px) 100vw, 1152px"
             priority
