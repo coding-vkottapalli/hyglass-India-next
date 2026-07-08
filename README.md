@@ -25,7 +25,7 @@ Copy `.env.local.example` to `.env.local` and fill in:
 
 - `NEXT_PUBLIC_WEB3FORMS_KEY` — enquiry/quote forms → email ([web3forms.com](https://web3forms.com))
 - `NEXT_PUBLIC_TAWK_ID` — live chat ([tawk.to](https://tawk.to))
-- `NEXT_PUBLIC_SITE_URL` — canonical URL for sitemap/robots (e.g. `https://hyglassindia.com`)
+- `NEXT_PUBLIC_SITE_URL` — canonical URL for sitemap/robots (e.g. `https://www.hyglassindia.in`)
 
 ## Deploy
 
