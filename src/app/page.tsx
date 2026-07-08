@@ -1,65 +1,118 @@
+import Link from "next/link";
 import Image from "next/image";
+import { site, categories } from "@/lib/site";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <>
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-brand-950 text-white">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-30"
+          style={{
+            background:
+              "radial-gradient(600px 300px at 80% -10%, var(--color-brand-500), transparent), radial-gradient(500px 300px at 0% 110%, var(--color-brand-700), transparent)",
+          }}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+        <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:py-28">
+          <div>
+            <p className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-medium tracking-wide text-brand-100 ring-1 ring-white/20">
+              Serving Indian laboratories for 45+ years
+            </p>
+            <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
+              {site.tagline}
+            </h1>
+            <p className="mt-5 max-w-xl text-lg text-brand-100">
+              {site.description}
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/quote"
+                className="rounded-lg bg-white px-5 py-3 text-sm font-semibold text-brand-700 shadow-sm transition hover:bg-brand-50"
+              >
+                Request a Quote
+              </Link>
+              <Link
+                href="/products"
+                className="rounded-lg bg-brand-600 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-brand-500"
+              >
+                Browse Products
+              </Link>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="overflow-hidden rounded-2xl ring-1 ring-white/15 shadow-2xl">
+              <Image
+                src="/hero.jpg"
+                alt="Laboratory bench with glassware, reagents and instruments"
+                width={914}
+                height={558}
+                priority
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Categories */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <div className="flex items-end justify-between">
+          <div>
+            <h2 className="text-2xl font-bold tracking-tight text-ink">
+              What we supply
+            </h2>
+            <p className="mt-1 text-muted">
+              Everything a modern laboratory needs, from a single trusted source.
+            </p>
+          </div>
+          <Link href="/products" className="hidden text-sm font-semibold text-brand-700 hover:text-brand-800 sm:block">
+            View all →
+          </Link>
         </div>
-      </main>
-    </div>
+
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {categories.map((c) => (
+            <Link
+              key={c.slug}
+              href={`/products/${c.slug}`}
+              className="group rounded-xl border border-slate-200 bg-white p-6 transition hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-md"
+            >
+              <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-50 text-brand-600 ring-1 ring-brand-100">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                  <path d="M9 3h6M10 3v6l-4.5 8A2 2 0 0 0 7.3 20h9.4a2 2 0 0 0 1.8-3L14 9V3" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
+              <h3 className="mt-4 font-semibold text-ink group-hover:text-brand-700">
+                {c.title}
+              </h3>
+              <p className="mt-1.5 text-sm text-muted">{c.blurb}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Quote CTA */}
+      <section className="border-t border-slate-200 bg-slate-50">
+        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-4 py-14 sm:px-6 md:flex-row md:items-center">
+          <div>
+            <h2 className="text-2xl font-bold tracking-tight text-ink">
+              Can&rsquo;t find a product? Just ask.
+            </h2>
+            <p className="mt-1 text-muted">
+              We source hard-to-find items too. Send an enquiry and we&rsquo;ll get back with a quote.
+            </p>
+          </div>
+          <Link
+            href="/quote"
+            className="rounded-lg bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700"
+          >
+            Request a Quote
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }

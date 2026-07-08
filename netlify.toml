@@ -1,0 +1,8 @@
+# Netlify deploy config (ignored by other hosts).
+# Cloudflare Pages: set build command "npm run build" and output dir "out" in its dashboard.
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "20"

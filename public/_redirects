@@ -1,0 +1,33 @@
+# Redirects from the OLD FrontPage site to the new routes.
+# Works on both Netlify and Cloudflare Pages. 301 = permanent (preserves SEO).
+
+/index.html            /              301
+/aboutus.html          /about/        301
+/products.html         /products/     301
+/chemicals.html        /products/chemicals/   301
+/glassware.html        /products/glassware/   301
+/equipments.html       /products/equipment/   301
+/generalitems.html     /products/general/     301
+/partners.html         /brands/       301
+/clients.html          /clients/      301
+/contactus.html        /contact/      301
+/requestquote.html     /quote/        301
+/request.html          /quote/        301
+/request2.html         /quote/        301
+/downloadourcat.html   /products/     301
+/sitemap.html          /              301
+
+# Old A–Z catalogue pages -> the searchable category pages
+/chem*.html            /products/chemicals/   301
+/glassware*.html       /products/glassware/   301
+/photogallery*.html    /gallery/      301
+
+# Old brand pages -> brands hub
+/borosil.html          /brands/       301
+/sartorius.html        /brands/       301
+/qualigens.html        /brands/       301
+/himedia.html          /brands/       301
+/remi.html             /brands/       301
+/rolex.html            /brands/       301
+/microlit.html         /brands/       301
+/fischer.html          /brands/       301

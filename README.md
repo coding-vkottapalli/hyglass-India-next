@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HyGlass & Chemicals — Website
 
-## Getting Started
+Modern rebuild of the HyGlass & Chemicals site (laboratory glassware, chemicals,
+reagents & scientific equipment — Hyderabad).
 
-First, run the development server:
+**Stack:** Next.js 16 · React 19 · Tailwind CSS v4 · TypeScript · static export.
+
+## Develop
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # static export -> ./out
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Content
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Company data: `src/lib/site.ts`
+- Catalog data: `src/data/catalog/*.json` (regenerate from the old site with `node scripts/migrate-catalog.mjs`)
+- Brands: `src/lib/brands.ts` · Clients: `src/lib/clients.ts` · Gallery: `src/lib/gallery.ts`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Integrations (free — activate with keys)
 
-## Learn More
+Copy `.env.local.example` to `.env.local` and fill in:
 
-To learn more about Next.js, take a look at the following resources:
+- `NEXT_PUBLIC_WEB3FORMS_KEY` — enquiry/quote forms → email ([web3forms.com](https://web3forms.com))
+- `NEXT_PUBLIC_TAWK_ID` — live chat ([tawk.to](https://tawk.to))
+- `NEXT_PUBLIC_SITE_URL` — canonical URL for sitemap/robots (e.g. `https://hyglassindia.com`)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Static site — build output is `./out`.
 
-## Deploy on Vercel
+- **Netlify:** connect the repo; config is in `netlify.toml` (build `npm run build`, publish `out`).
+- **Cloudflare Pages:** connect the repo; set build command `npm run build`, output dir `out`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`public/_redirects` maps old `.html` URLs to the new routes (works on both hosts).

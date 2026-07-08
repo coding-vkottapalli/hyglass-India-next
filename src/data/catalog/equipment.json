@@ -1,0 +1,425 @@
+[
+  {
+    "name": "Pipette"
+  },
+  {
+    "name": "Tips"
+  },
+  {
+    "name": "Racks"
+  },
+  {
+    "name": "PCR"
+  },
+  {
+    "name": "Centrifuge"
+  },
+  {
+    "name": "Stirrer"
+  },
+  {
+    "name": "Shaker"
+  },
+  {
+    "name": "Monocular"
+  },
+  {
+    "name": "Binocular"
+  },
+  {
+    "name": "ABBE -Refracto-meter"
+  },
+  {
+    "name": "Air-Curtain"
+  },
+  {
+    "name": "Ammonia diffusiom plant"
+  },
+  {
+    "name": "Autoclave"
+  },
+  {
+    "name": "Automatic Pipette washer"
+  },
+  {
+    "name": "ABBE flash point apparatus"
+  },
+  {
+    "name": "aniline point apparatus"
+  },
+  {
+    "name": "animal cages"
+  },
+  {
+    "name": "Anerobic Chamber"
+  },
+  {
+    "name": "Animal isolator"
+  },
+  {
+    "name": "B.O.D Incubators"
+  },
+  {
+    "name": "Ball mill"
+  },
+  {
+    "name": "Baths"
+  },
+  {
+    "name": "Blood Cell counter"
+  },
+  {
+    "name": "Bomb calorimeters"
+  },
+  {
+    "name": "Bulk density"
+  },
+  {
+    "name": "Apparatus"
+  },
+  {
+    "name": "Bunsen Electric"
+  },
+  {
+    "name": "butrro refractometer"
+  },
+  {
+    "name": "Calorimeter"
+  },
+  {
+    "name": "cloud and pour point apparatus"
+  },
+  {
+    "name": "colony counter"
+  },
+  {
+    "name": "cyclo mixer"
+  },
+  {
+    "name": "cleveland flash & Fire point apparatus"
+  },
+  {
+    "name": "comparator box"
+  },
+  {
+    "name": "cone pentrometer"
+  },
+  {
+    "name": "cement autoclave"
+  },
+  {
+    "name": "conductivity"
+  },
+  {
+    "name": "meter"
+  },
+  {
+    "name": "chromatographic chambers"
+  },
+  {
+    "name": "De-himidifler"
+  },
+  {
+    "name": "De-ionizer"
+  },
+  {
+    "name": "dough mixer dough roller"
+  },
+  {
+    "name": "Drop point apparatus"
+  },
+  {
+    "name": "Egg-incubator"
+  },
+  {
+    "name": "Electro phoresis apparatus"
+  },
+  {
+    "name": "Emulsifier"
+  },
+  {
+    "name": "Fermentation chamber"
+  },
+  {
+    "name": "Flame photometer"
+  },
+  {
+    "name": "Floculator"
+  },
+  {
+    "name": "Fumehood"
+  },
+  {
+    "name": "Gas plant"
+  },
+  {
+    "name": "Growth chamber"
+  },
+  {
+    "name": "Gauging trowl"
+  },
+  {
+    "name": "Galvanometers"
+  },
+  {
+    "name": "Heating mantle & Pads"
+  },
+  {
+    "name": "Homogeniser"
+  },
+  {
+    "name": "Hot & Cold air blower"
+  },
+  {
+    "name": "Hot plates"
+  },
+  {
+    "name": "Humidifiers"
+  },
+  {
+    "name": "Incubator"
+  },
+  {
+    "name": "Incubator shaker bath"
+  },
+  {
+    "name": "innoculationm hood"
+  },
+  {
+    "name": "insect-box inst rument"
+  },
+  {
+    "name": "sterilizer"
+  },
+  {
+    "name": "illuminating magnifier"
+  },
+  {
+    "name": "infra red moisture balance."
+  },
+  {
+    "name": "jaw crusher"
+  },
+  {
+    "name": "Jolting apparatus"
+  },
+  {
+    "name": "lab-pilverizer"
+  },
+  {
+    "name": "Laminar flow bench"
+  },
+  {
+    "name": "LUX-Met er"
+  },
+  {
+    "name": "Laboratory stirrer"
+  },
+  {
+    "name": "Melting/Boiling point"
+  },
+  {
+    "name": "Mercuty diffusion pump"
+  },
+  {
+    "name": "Micro-tomes"
+  },
+  {
+    "name": "melting point of"
+  },
+  {
+    "name": "petroleumwax"
+  },
+  {
+    "name": "mifflffurnance"
+  },
+  {
+    "name": "Magnetic stirrer"
+  },
+  {
+    "name": "Micropscopes"
+  },
+  {
+    "name": "mechanical agate"
+  },
+  {
+    "name": "mortar & Pestle."
+  },
+  {
+    "name": "Nephelo"
+  },
+  {
+    "name": "Turbidity-meter"
+  },
+  {
+    "name": "oscillators ovens."
+  },
+  {
+    "name": "PH Meter"
+  },
+  {
+    "name": "Photo chemicals reactor"
+  },
+  {
+    "name": "photo electric calorimeter"
+  },
+  {
+    "name": "Polarimeter"
+  },
+  {
+    "name": "Potentio meter"
+  },
+  {
+    "name": "Projectors"
+  },
+  {
+    "name": "pyrometer"
+  },
+  {
+    "name": "petistaltic pump."
+  },
+  {
+    "name": "Quartz Distillation & Quick freezers"
+  },
+  {
+    "name": "Refracto Meters"
+  },
+  {
+    "name": "Rotary vacuum Evaporator"
+  },
+  {
+    "name": "Relative density appara tus"
+  },
+  {
+    "name": "Rotary shakers"
+  },
+  {
+    "name": "Reciprocating shakers."
+  },
+  {
+    "name": "Sand Bath"
+  },
+  {
+    "name": "Seed germinatinatior"
+  },
+  {
+    "name": "soxhlet extraction apparatus"
+  },
+  {
+    "name": "Spectro photometer"
+  },
+  {
+    "name": "stirrers"
+  },
+  {
+    "name": "spectrometer"
+  },
+  {
+    "name": "Geive shaker"
+  },
+  {
+    "name": "Table hardness test apparatus"
+  },
+  {
+    "name": "Tissuye culture hood"
+  },
+  {
+    "name": "Tissue homogeniozer"
+  },
+  {
+    "name": "Tissue Culture"
+  },
+  {
+    "name": "rack"
+  },
+  {
+    "name": "TLC Kit"
+  },
+  {
+    "name": "Tintometer"
+  },
+  {
+    "name": "Tacho meter"
+  },
+  {
+    "name": "Test Seive"
+  },
+  {
+    "name": "Tablet coating pan"
+  },
+  {
+    "name": "Tablet counter"
+  },
+  {
+    "name": "Tablet making machine"
+  },
+  {
+    "name": "Thermo-hydrometer."
+  },
+  {
+    "name": "Ultra violet cabinet"
+  },
+  {
+    "name": "Ultra low Te"
+  },
+  {
+    "name": "bath"
+  },
+  {
+    "name": "Universal auto titrator."
+  },
+  {
+    "name": "Vacuum pump"
+  },
+  {
+    "name": "Vacuum rotary evaporator"
+  },
+  {
+    "name": "vaccine storage cabinet"
+  },
+  {
+    "name": "VDRL- shaker"
+  },
+  {
+    "name": "viscometers"
+  },
+  {
+    "name": "vibrating table"
+  },
+  {
+    "name": "Voltage stabilizer."
+  },
+  {
+    "name": "Water bath"
+  },
+  {
+    "name": "Water jacketed oven"
+  },
+  {
+    "name": "water purifier"
+  },
+  {
+    "name": "water still"
+  },
+  {
+    "name": "willymill"
+  },
+  {
+    "name": "water testing kit."
+  },
+  {
+    "name": "us I products"
+  },
+  {
+    "name": "I clients I"
+  },
+  {
+    "name": "contact"
+  },
+  {
+    "name": "in the world. Products"
+  },
+  {
+    "name": "This"
+  }
+]
