@@ -100,6 +100,37 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Capability band */}
+      <section className="border-t border-slate-200">
+        <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-16 sm:px-6 md:grid-cols-2">
+          <div className="relative aspect-video overflow-hidden rounded-2xl border border-slate-200">
+            <Image
+              src="/lab/cellculture.png"
+              alt="Laboratory flasks, culture media and instruments"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold tracking-tight text-ink">
+              Sourcing and supply you can rely on
+            </h2>
+            <p className="mt-3 text-muted">
+              From everyday consumables to hard-to-find reagents and instruments,
+              we source globally and deliver across India, backed by four decades
+              of experience and dependable after-sales support.
+            </p>
+            <Link
+              href="/about"
+              className="mt-5 inline-block text-sm font-semibold text-brand-700 hover:text-brand-800"
+            >
+              Learn about us →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Quote CTA */}
       <section className="border-t border-slate-200 bg-slate-50">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-4 py-14 sm:px-6 md:flex-row md:items-center">

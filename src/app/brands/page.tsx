@@ -19,6 +19,19 @@ export default function BrandsPage() {
         subtitle="We represent and stock leading Indian and overseas laboratory brands across glassware, chemicals, instruments and consumables."
       />
 
+      <div className="mx-auto max-w-6xl px-4 pt-8 sm:px-6">
+        <div className="relative h-56 overflow-hidden rounded-2xl border border-slate-200 sm:h-72">
+          <Image
+            src="/banners/warehouse.png"
+            alt="HyGlass warehouse stocked with laboratory supplies"
+            fill
+            sizes="(max-width: 1152px) 100vw, 1152px"
+            priority
+            className="object-cover"
+          />
+        </div>
+      </div>
+
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {brands.map((b) => (

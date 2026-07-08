@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageIntro } from "@/components/PageIntro";
 import { QuoteForm } from "@/components/QuoteForm";
 
@@ -37,6 +38,15 @@ export default function QuotePage() {
                 </li>
               ))}
             </ul>
+            <div className="relative mt-6 hidden h-56 overflow-hidden rounded-xl border border-slate-200 lg:block">
+              <Image
+                src="/lab/analysis.png"
+                alt="Laboratory analysis instruments"
+                fill
+                sizes="40vw"
+                className="object-cover"
+              />
+            </div>
           </div>
 
           <div className="lg:col-span-3">

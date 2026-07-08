@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageIntro } from "@/components/PageIntro";
 import { QuoteForm } from "@/components/QuoteForm";
 import { site } from "@/lib/site";
@@ -21,6 +22,19 @@ export default function ContactPage() {
         title="Talk to us"
         subtitle="Questions, quotes or hard-to-find items? We&rsquo;re happy to help."
       />
+
+      <div className="mx-auto max-w-6xl px-4 pt-8 sm:px-6">
+        <div className="relative h-56 overflow-hidden rounded-2xl border border-slate-200 sm:h-72">
+          <Image
+            src="/banners/contact.png"
+            alt="HyGlass office reception"
+            fill
+            sizes="(max-width: 1152px) 100vw, 1152px"
+            priority
+            className="object-cover"
+          />
+        </div>
+      </div>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div className="grid gap-10 lg:grid-cols-2">

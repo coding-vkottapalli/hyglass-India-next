@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageIntro } from "@/components/PageIntro";
 import { clients, clientSectors } from "@/lib/clients";
 
@@ -16,6 +17,19 @@ export default function ClientsPage() {
         title="Trusted by India's leading laboratories"
         subtitle="For over 45 years, premier research, pharma, agricultural and government institutions have relied on us."
       />
+
+      <div className="mx-auto max-w-6xl px-4 pt-8 sm:px-6">
+        <div className="relative h-56 overflow-hidden rounded-2xl border border-slate-200 sm:h-72">
+          <Image
+            src="/banners/clients.png"
+            alt="HyGlass team meeting with clients in Hyderabad"
+            fill
+            sizes="(max-width: 1152px) 100vw, 1152px"
+            priority
+            className="object-cover"
+          />
+        </div>
+      </div>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         {/* Sectors */}

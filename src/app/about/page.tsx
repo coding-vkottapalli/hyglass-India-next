@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PageIntro } from "@/components/PageIntro";
 import { site } from "@/lib/site";
@@ -35,6 +36,19 @@ export default function AboutPage() {
         title="A single, trusted source for your laboratory"
         subtitle="Family-owned, Hyderabad-based, and serving Indian science for over four decades."
       />
+
+      <div className="mx-auto max-w-6xl px-4 pt-8 sm:px-6">
+        <div className="relative h-56 overflow-hidden rounded-2xl border border-slate-200 sm:h-72">
+          <Image
+            src="/lab/automation.png"
+            alt="Modern laboratory workflow at HyGlass"
+            fill
+            sizes="(max-width: 1152px) 100vw, 1152px"
+            priority
+            className="object-cover"
+          />
+        </div>
+      </div>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-3">
@@ -94,6 +108,15 @@ export default function AboutPage() {
             >
               Request a Quote
             </Link>
+            <div className="relative h-48 overflow-hidden rounded-xl border border-slate-200">
+              <Image
+                src="/lab/distillation.png"
+                alt="Laboratory glassware distillation setup"
+                fill
+                sizes="(max-width: 1024px) 100vw, 33vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
