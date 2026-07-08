@@ -6,7 +6,7 @@ import { categories } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Laboratory glassware, chemicals & reagents, scientific instruments and general lab consumables — browse HyGlass product categories.",
+    "Laboratory glassware, chemicals & reagents, scientific instruments and general lab consumables. Browse HyGlass product categories.",
 };
 
 export default function ProductsPage() {
@@ -15,7 +15,7 @@ export default function ProductsPage() {
       <PageIntro
         eyebrow="Products"
         title="Everything your laboratory needs"
-        subtitle="Browse by category, or send an enquiry for anything you can&rsquo;t find — we source hard-to-find items too."
+        subtitle="Browse by category, or send an enquiry for anything you can&rsquo;t find. We source hard-to-find items too."
       />
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">

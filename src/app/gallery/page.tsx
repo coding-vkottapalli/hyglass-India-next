@@ -5,7 +5,7 @@ import { GalleryGrid } from "@/components/GalleryGrid";
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "A look at HyGlass — our delivery fleet, laboratory work, team and product range.",
+    "A look at HyGlass: our delivery fleet, laboratory work, team and product range.",
 };
 
 export default function GalleryPage() {

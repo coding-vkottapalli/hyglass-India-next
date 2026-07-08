@@ -4,7 +4,7 @@ import { useState } from "react";
 
 // Free email delivery via Web3Forms (no backend, unlimited submissions).
 // Activate by putting your key in .env.local as NEXT_PUBLIC_WEB3FORMS_KEY.
-// Get one free (1 min) at https://web3forms.com — enter your Gmail, copy the key.
+// Get one free (1 min) at https://web3forms.com, then enter your Gmail and copy the key.
 const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? "";
 
 type Status = "idle" | "sending" | "sent" | "error";
@@ -51,7 +51,7 @@ export function QuoteForm({ compact = false }: { compact?: boolean }) {
   if (status === "sent") {
     return (
       <div className="rounded-xl border border-green-200 bg-green-50 p-6 text-center">
-        <p className="font-semibold text-green-800">Thank you — enquiry received.</p>
+        <p className="font-semibold text-green-800">Thank you, your enquiry has been received.</p>
         <p className="mt-1 text-sm text-green-700">
           Our team will get back to you shortly.
         </p>
@@ -67,7 +67,7 @@ export function QuoteForm({ compact = false }: { compact?: boolean }) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      {/* Honeypot — hidden from users, catches bots (Web3Forms convention). */}
+      {/* Honeypot: hidden from users, catches bots (Web3Forms convention). */}
       <input type="checkbox" name="botcheck" tabIndex={-1} className="hidden" aria-hidden />
 
       <div className={compact ? "space-y-4" : "grid gap-4 sm:grid-cols-2"}>

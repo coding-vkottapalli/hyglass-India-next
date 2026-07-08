@@ -5,7 +5,7 @@ import { QuoteForm } from "@/components/QuoteForm";
 export const metadata: Metadata = {
   title: "Request a Quote",
   description:
-    "Send an enquiry to HyGlass & Chemicals for laboratory glassware, chemicals, reagents or equipment — including hard-to-find items.",
+    "Send an enquiry to HyGlass & Chemicals for laboratory glassware, chemicals, reagents or equipment, including hard-to-find items.",
 };
 
 const points = [

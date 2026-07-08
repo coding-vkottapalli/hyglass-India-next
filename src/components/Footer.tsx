@@ -7,7 +7,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-4">
         <div className="md:col-span-2">
           <p className="text-lg font-extrabold text-ink">{site.name}</p>
-          <p className="mt-2 max-w-sm text-sm text-muted">{site.description}</p>
+          <p className="mt-2 max-w-sm text-sm text-muted">{site.shortDescription}</p>
           <p className="mt-4 text-xs text-muted">
             Also: {site.sisterConcerns.join(" · ")}
           </p>

@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with HyGlass & Chemicals — Sri Krupa Market, Malakpet, Hyderabad. Phone, email and enquiry form.",
+    "Get in touch with HyGlass & Chemicals at Sri Krupa Market, Malakpet, Hyderabad. Phone, email and enquiry form.",
 };
 
 const mapQuery = encodeURIComponent(
@@ -19,7 +19,7 @@ export default function ContactPage() {
       <PageIntro
         eyebrow="Contact"
         title="Talk to us"
-        subtitle="Questions, quotes or hard-to-find items — we&rsquo;re happy to help."
+        subtitle="Questions, quotes or hard-to-find items? We&rsquo;re happy to help."
       />
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">

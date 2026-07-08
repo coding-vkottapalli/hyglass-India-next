@@ -6,7 +6,9 @@ export const site = {
   tagline: "Laboratory Glassware, Chemicals & Scientific Equipment",
   since: 1979, // ~45+ years as of the old site's copy
   description:
-    "A family-owned Hyderabad supplier of laboratory glassware, chemicals & reagents, scientific instruments and general lab consumables — serving research, medical, pharma and educational labs across India for over 45 years.",
+    "A family-owned Hyderabad supplier of laboratory glassware, chemicals & reagents, scientific instruments and general lab consumables, serving research, medical, pharma and educational labs across India for over 45 years.",
+  shortDescription:
+    "Family-owned Hyderabad supplier of laboratory glassware, chemicals & scientific equipment, serving labs across India since 1979.",
   sisterConcerns: ["Pearala Agencies", "Annapurna Scientific & Lab Equipments"],
 
   address: {

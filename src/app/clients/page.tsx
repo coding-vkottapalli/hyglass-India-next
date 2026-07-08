@@ -5,7 +5,7 @@ import { clients, clientSectors } from "@/lib/clients";
 export const metadata: Metadata = {
   title: "Clients",
   description:
-    "HyGlass serves leading research institutes, universities, pharma and government laboratories across India — IICT, CCMB, ICRISAT, NIN, DRDL, Aurobindo Pharma and more.",
+    "HyGlass serves leading research institutes, universities, pharma and government laboratories across India, including IICT, CCMB, ICRISAT, NIN, DRDL, Aurobindo Pharma and more.",
 };
 
 export default function ClientsPage() {

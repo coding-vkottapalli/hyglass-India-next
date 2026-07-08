@@ -7,7 +7,7 @@ import { brands } from "@/lib/brands";
 export const metadata: Metadata = {
   title: "Brands & Partners",
   description:
-    "HyGlass is an authorised stockist and agent for leading laboratory brands — Borosil, Sartorius, Qualigens, HiMedia, REMI, Microlit and many more.",
+    "HyGlass is an authorised stockist and agent for leading laboratory brands including Borosil, Sartorius, Qualigens, HiMedia, REMI, Microlit and many more.",
 };
 
 export default function BrandsPage() {

@@ -1,4 +1,4 @@
-// Brand partners — logos migrated from the old site (public/logos/*.gif).
+// Brand partners. Logos migrated from the old site (public/logos/*.gif).
 // Names/descriptions curated; "" description = show logo + name only.
 export type Brand = {
   logo: string;

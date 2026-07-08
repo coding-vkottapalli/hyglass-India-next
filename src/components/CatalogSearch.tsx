@@ -51,7 +51,7 @@ export function CatalogSearch({
         <p className="mt-2 text-xs text-muted">
           {filtered.length.toLocaleString()}{" "}
           {filtered.length === 1 ? "result" : "results"}
-          {filtered.length > RENDER_CAP && ` — showing first ${RENDER_CAP}, refine to narrow`}
+          {filtered.length > RENDER_CAP && ` (showing first ${RENDER_CAP}, refine to narrow)`}
         </p>
       </div>
 
@@ -59,7 +59,7 @@ export function CatalogSearch({
       {shown.length === 0 ? (
         <div className="mt-8 rounded-xl border border-dashed border-slate-300 p-10 text-center">
           <p className="text-sm text-muted">
-            No matches for &ldquo;{query}&rdquo;. We source items not listed too —{" "}
+            No matches for &ldquo;{query}&rdquo;. We source items not listed too.{" "}
             <Link href="/quote" className="font-semibold text-brand-700 hover:text-brand-800">
               send an enquiry
             </Link>

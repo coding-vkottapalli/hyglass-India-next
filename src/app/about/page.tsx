@@ -43,7 +43,7 @@ export default function AboutPage() {
               <strong className="text-ink">{site.name}</strong> and{" "}
               <strong className="text-ink">Pearala Agencies</strong> is a
               family-owned company situated in Hyderabad with vast experience.
-              We are known for globally sourcing and supplying lab needs — from
+              We are known for globally sourcing and supplying lab needs, from
               laboratory glassware and its fabrication, to chemicals,
               bio-chemicals and rare reagents, culture media, scientific
               equipment, bench-top instruments, a wide range of hi-tech
@@ -54,7 +54,7 @@ export default function AboutPage() {
             <p>
               We cater to customer requirements across India. It is our policy
               to offer quality products that meet the requirements of today&rsquo;s
-              scientists — at competitive prices, with timely supply and backed
+              scientists, at competitive prices, with timely supply and backed
               by high standards of after-sales service.
             </p>
             <p>

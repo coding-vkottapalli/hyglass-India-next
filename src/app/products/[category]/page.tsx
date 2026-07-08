@@ -43,7 +43,7 @@ export default async function CategoryPage({
         {items.length > 0 ? (
           <>
             <div className="mb-6 rounded-lg border border-brand-100 bg-brand-50 px-4 py-3 text-sm text-brand-800">
-              Browsing our {cat.title.toLowerCase()} range. Prices on request —
+              Browsing our {cat.title.toLowerCase()} range. Prices on request:
               tap <strong>Enquire</strong> on any item or{" "}
               <Link href="/quote" className="font-semibold underline">
                 request a full quote
@@ -59,7 +59,7 @@ export default async function CategoryPage({
             </h2>
             <p className="mx-auto mt-2 max-w-md text-sm text-muted">
               Send your requirements for {cat.title.toLowerCase()} and we&rsquo;ll
-              respond with a quote — including items not listed.
+              respond with a quote, including items not listed.
             </p>
             <Link
               href="/quote"

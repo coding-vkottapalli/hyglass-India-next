@@ -1,4 +1,4 @@
-// Reusable header band for inner pages — keeps titles consistent site-wide.
+// Reusable header band for inner pages. Keeps titles consistent site-wide.
 export function PageIntro({
   eyebrow,
   title,
