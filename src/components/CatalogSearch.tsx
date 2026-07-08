@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { Product } from "@/lib/catalog";
 
-const RENDER_CAP = 150; // keep the DOM light for large lists
+const PAGE_SIZE = 20; // items per page
 
 export function CatalogSearch({
   items,
@@ -14,6 +14,7 @@ export function CatalogSearch({
   categoryTitle: string;
 }) {
   const [query, setQuery] = useState("");
+  const [page, setPage] = useState(1);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -25,7 +26,12 @@ export function CatalogSearch({
     );
   }, [items, query]);
 
-  const shown = filtered.slice(0, RENDER_CAP);
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const currentPage = Math.min(page, totalPages);
+  const shown = filtered.slice(
+    (currentPage - 1) * PAGE_SIZE,
+    currentPage * PAGE_SIZE
+  );
 
   return (
     <div>
@@ -42,17 +48,15 @@ export function CatalogSearch({
           <input
             type="search"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder={`Search ${items.length.toLocaleString()} ${categoryTitle.toLowerCase()}…`}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setPage(1);
+            }}
+            placeholder={`Search ${categoryTitle.toLowerCase()}…`}
             className="w-full rounded-lg border border-slate-300 py-3 pl-10 pr-4 text-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
             aria-label={`Search ${categoryTitle}`}
           />
         </div>
-        <p className="mt-2 text-xs text-muted">
-          {filtered.length.toLocaleString()}{" "}
-          {filtered.length === 1 ? "result" : "results"}
-          {filtered.length > RENDER_CAP && ` (showing first ${RENDER_CAP}, refine to narrow)`}
-        </p>
       </div>
 
       {/* Results */}
@@ -88,6 +92,31 @@ export function CatalogSearch({
             </li>
           ))}
         </ul>
+      )}
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="mt-6 flex items-center justify-between gap-4">
+          <button
+            type="button"
+            onClick={() => setPage((p) => Math.max(1, p - 1))}
+            disabled={currentPage === 1}
+            className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-brand-400 hover:text-brand-700 disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            ← Previous
+          </button>
+          <span className="text-sm text-muted">
+            Page {currentPage} of {totalPages}
+          </span>
+          <button
+            type="button"
+            onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+            disabled={currentPage === totalPages}
+            className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-brand-400 hover:text-brand-700 disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            Next →
+          </button>
+        </div>
       )}
     </div>
   );
