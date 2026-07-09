@@ -132,19 +132,27 @@ export default function Home() {
       </section>
 
       {/* Quote CTA */}
-      <section className="border-t border-slate-200 bg-slate-50">
-        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-4 py-14 sm:px-6 md:flex-row md:items-center">
+      <section className="relative overflow-hidden border-t border-brand-800 bg-linear-to-br from-brand-700 to-brand-900 text-white">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-40"
+          style={{
+            background:
+              "radial-gradient(500px 240px at 88% -30%, var(--color-brand-400), transparent)",
+          }}
+        />
+        <div className="relative mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-4 py-14 sm:px-6 md:flex-row md:items-center">
           <div>
-            <h2 className="text-2xl font-bold tracking-tight text-ink">
+            <h2 className="text-2xl font-bold tracking-tight">
               Can&rsquo;t find a product? Just ask.
             </h2>
-            <p className="mt-1 text-muted">
+            <p className="mt-1 text-brand-100">
               We source hard-to-find items too. Send an enquiry and we&rsquo;ll get back with a quote.
             </p>
           </div>
           <Link
             href="/quote"
-            className="rounded-lg bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700"
+            className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-brand-700 shadow-sm transition hover:bg-brand-50"
           >
             Request a Quote
           </Link>

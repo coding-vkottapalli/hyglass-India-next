@@ -26,7 +26,7 @@ export default function ClientsPage() {
             fill
             sizes="(max-width: 1152px) 100vw, 1152px"
             priority
-            className="object-cover"
+            className="object-cover object-top"
           />
         </div>
       </div>

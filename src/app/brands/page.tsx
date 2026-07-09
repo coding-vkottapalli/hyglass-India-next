@@ -62,22 +62,22 @@ export default function BrandsPage() {
         </div>
 
         {overseasPartners.length > 0 && (
-          <div className="mt-14">
+          <div className="mt-14 rounded-2xl bg-linear-to-br from-brand-50 to-brand-100/50 p-6 ring-1 ring-brand-100 sm:p-8">
             <h2 className="text-xl font-bold text-ink">Overseas Partners</h2>
             <p className="mt-1 text-sm text-muted">
               International manufacturers we represent and source from for
               Indian laboratories.
             </p>
-            <ul className="mt-5 divide-y divide-slate-100 overflow-hidden rounded-xl border border-slate-200">
+            <ul className="mt-5 divide-y divide-brand-100 overflow-hidden rounded-xl border border-brand-100 bg-white/70">
               {overseasPartners.map((p) => (
                 <li
                   key={p.name}
-                  className="flex flex-col gap-1 p-4 transition hover:bg-brand-50/40 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-5"
+                  className="flex flex-col gap-1 p-4 transition hover:bg-white sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-5"
                 >
                   <div className="min-w-0">
                     <span className="font-semibold text-ink">{p.name}</span>
                     {p.country && (
-                      <span className="ml-2 rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-xs text-muted">
+                      <span className="ml-2 rounded-full border border-brand-200 bg-white px-2 py-0.5 text-xs font-medium text-brand-700">
                         {p.country}
                       </span>
                     )}
