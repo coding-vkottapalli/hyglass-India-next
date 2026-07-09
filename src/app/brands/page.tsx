@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PageIntro } from "@/components/PageIntro";
 import { brands } from "@/lib/brands";
+import { overseasPartners } from "@/lib/partners";
 
 export const metadata: Metadata = {
   title: "Brands & Partners",
@@ -59,6 +60,38 @@ export default function BrandsPage() {
             </div>
           ))}
         </div>
+
+        {overseasPartners.length > 0 && (
+          <div className="mt-14">
+            <h2 className="text-xl font-bold text-ink">Overseas Partners</h2>
+            <p className="mt-1 text-sm text-muted">
+              International manufacturers we represent and source from for
+              Indian laboratories.
+            </p>
+            <ul className="mt-5 divide-y divide-slate-100 overflow-hidden rounded-xl border border-slate-200">
+              {overseasPartners.map((p) => (
+                <li
+                  key={p.name}
+                  className="flex flex-col gap-1 p-4 transition hover:bg-brand-50/40 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-5"
+                >
+                  <div className="min-w-0">
+                    <span className="font-semibold text-ink">{p.name}</span>
+                    {p.country && (
+                      <span className="ml-2 rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-xs text-muted">
+                        {p.country}
+                      </span>
+                    )}
+                  </div>
+                  {p.specialty && (
+                    <span className="text-sm text-muted sm:text-right">
+                      {p.specialty}
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         <div className="mt-10 rounded-xl border border-brand-100 bg-brand-50 p-6 text-center">
           <p className="text-sm text-brand-800">

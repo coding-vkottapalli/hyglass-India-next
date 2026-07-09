@@ -14,7 +14,7 @@
 /requestquote.html     /quote/        301
 /request.html          /quote/        301
 /request2.html         /quote/        301
-/downloadourcat.html   /products/     301
+/downloadourcat.html   /catalogue/    301
 /sitemap.html          /              301
 
 # Old A–Z catalogue pages -> the searchable category pages
